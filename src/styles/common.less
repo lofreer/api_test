@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+input,
+textarea,
+button {
+    outline: none;
+}
+html,
+body {
+    height: 100%;
+    background: #f5f5f5;
+    overflow: hidden;
+}
+body {
+    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+.clearfix:after{
+    content: "020"; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;  
+}
+
+#root {
+    height: 100%;
+}
+
+.container {
+    padding: 0 15px;
+    max-width: 1680px;
+    min-width: 980px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #cfcfcf;
+}
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #cfcfcf;
+}
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #cfcfcf;
+}
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #cfcfcf;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background: #c6c6c6;
+}
+::-webkit-scrollbar-track {
+    background: #e5e5e5;
+}
+
+.round-scroll::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+}
+.round-scroll::-webkit-scrollbar-track {
+    border-radius: 6px;
+}
+
+.eui-content::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+}
+.eui-content::-webkit-scrollbar-track {
+    border-radius: 6px;
+}
+
+.no-scroll::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}

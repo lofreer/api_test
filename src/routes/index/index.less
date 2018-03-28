@@ -1,0 +1,180 @@
+.root-body {
+    display: flex;
+    height: 100%; 
+
+    .root-header {
+        position: relative;
+        width: 60px;
+        height: 100%; 
+        background: #323232;
+        padding-top: 60px;
+    }
+    
+    .logo {
+        position: absolute;
+        left: 0; top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid #555;
+        padding: 15px 0;
+    
+        img {
+            width: 34px;
+        }
+    }
+
+    .nav {
+        flex: 1;
+        padding-top: 25px;   
+    }
+    .nav-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #92908d;
+        cursor: pointer;
+        border-style: solid;
+        border-width: 0 3px;
+        border-color: transparent;
+        margin-bottom: 25px;
+
+        .icon {
+            font-size: 26px;
+        }
+        span {
+            font-size: 12px;
+            margin-top: 4px;
+        }
+
+        &:hover,
+        &.active {
+            color: #fff;
+        }
+        &.active {
+            color: #fff;
+            border-left-color: #df3539;
+        }
+    }
+
+    .menu {
+        position: absolute;
+        left: 0; bottom: 0;
+        width: 100%;
+        padding-bottom: 15px;
+    
+        .menu-item {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #92908d;
+            cursor: pointer;
+    
+            &.member {
+                margin-top: 20px;
+            }
+    
+            &:not(:last-child) {
+                margin-bottom: 8px;
+            }
+    
+            &.active {
+    
+                .icon-box {
+                    color: #fff;
+                    background: #202020;
+                }
+            } 
+            
+            a {
+                color: #92908d;
+            }
+        }
+        .icon-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            border-radius: 50%;
+    
+            &:not(.member-item):hover {
+                color: #fff;
+            }
+        }
+        .member {
+            position: relative;
+
+            &:hover .logout {
+                display: block;
+            }
+        }
+        .member-pic {
+            width: 44px;
+            height: 44px;
+            background: #fff;
+            cursor: pointer;      
+            background: url('./imgs/member.jpg') no-repeat;
+            background-size: 100%;  
+            border-radius: 50%;
+            box-shadow: 0 0 1px #ddd;
+            overflow: hidden;
+    
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .logout {
+            position: absolute;
+            z-index: 1;
+            top: 20%;
+            left: 100%;
+            transform: translate(-2px);
+            padding-left: 10px;
+            display: none;
+        }
+        .logout-tips {
+            position: relative;
+            text-align: left;
+            font-size: 12px;
+            white-space: nowrap;
+            color: #fff;
+            background: rgba(0,0,0,.6);
+            border-radius: 4px;
+            padding: 10px;
+
+            .arrow {
+                position: absolute;
+                z-index: 1;
+                right: 100%;
+                top: 50%;
+                -webkit-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+                display: inline-block;
+                width: 0;
+                height: 0;
+                border-top: 5px solid transparent;
+                border-bottom: 5px solid transparent;
+                border-right: 5px solid rgba(0,0,0,.6);
+            }
+        }
+
+    }
+
+    
+}
+
+.root-main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+    overflow: auto;
+}

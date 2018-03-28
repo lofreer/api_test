@@ -1,0 +1,126 @@
+.modal-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999999;
+    overflow: hidden;
+    // Prevent Chrome on Windows from adding a focus outline. For details, see
+    // https://github.com/twbs/bootstrap/pull/10951.
+    outline: 0;
+    -webkit-overflow-scrolling: touch;
+    background: rgba(0,0,0,.2);
+  
+    &.modal-enter {
+      opacity: 1;
+    }
+  
+    &.modal-leave {
+      opacity: 0;
+    }
+  
+    .modal-inner {
+      width: 100%;
+      height: 100%;
+      padding: 5rem;
+      display: flex;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      position: absolute;
+    }
+
+    .modal-body {
+        position: relative;
+        top: -2rem;
+        margin: auto;
+        background-color: #fff;
+        background-clip: padding-box;
+        border-radius: .3rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        // Remove focus outline from opened modal
+        outline: 0;
+        transition-duration: .25s;
+        transition-timing-function: cubic-bezier(.22,.61,.36,1);
+        opacity: 0;
+        transition: transform .3s ease-out;
+        transform: translate(0, -25%);
+    }
+
+    .modal-in .modal-body {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+
+    .modal-header {
+        padding: 1rem;
+        padding-right: 3rem;
+        border-bottom: 1px solid #e5e5e5;
+        background: transparent;
+        font-size: 1rem;
+        font-weight: 500;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    
+    .modal-content {
+        min-height: 6rem;
+    }
+    .modal-close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 1rem;      
+        color: #bbb;
+        cursor: pointer;
+
+        &:hover {
+            color: #888;
+        }
+    }
+      
+    .modal-footer {
+        padding: 15px;
+        text-align: right;
+        border-top: 1px solid #e5e5e5;
+      
+        button {
+            display: inline-block;
+            line-height: 1;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            cursor: pointer;
+            user-select: none;
+            border: 1px solid transparent;
+            transition: all .2s ease-in-out;
+            padding: .5rem 1rem;
+            font-weight: 400;
+            font-size: 14px;
+            border-radius: 2px;
+            margin-left: .5rem;
+
+            &.secondary {
+                color: #bbb;
+                border-color: #bbb;
+
+                &:hover {
+                    color: #666;
+                    border-color: #666;
+                }
+            }
+            &.primary {
+                color: #fff;
+                background-color: #777;
+                border-color: #777;
+
+                &:hover {
+                    color: #fff;
+                    background-color: #666;;
+                    border-color: #666;;
+                }
+            }
+        }
+    }
+}
